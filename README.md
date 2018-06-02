@@ -42,8 +42,4 @@ the same map (I don't like this option), or do some magic. Same question with ri
 
 To make your own server to try things out you can use `python -m http.server` to create a sever, then go to the [localhost:8000](http://localhost:8000) (assuming it will listen to the port 8000).
 
-<<<<<<< HEAD
 Also, you can try the game in its current state on [its github page](https://mike239x.github.io/labyrinth).
-=======
-Also, you can try the game in its current state on [its github page](http://mike239x.github.io/labyrinth).
->>>>>>> 882372be464662c922727d93d45f7f106d81a11a
