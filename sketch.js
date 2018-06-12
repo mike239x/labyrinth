@@ -7,8 +7,6 @@ let completed = false;
 let pencil;
 let floorTiles;
 let wallTiles;
-const _ = undefined;
-
 
 function preload() {
   pencil = loadImage('tiles/pencil.png');
@@ -51,7 +49,7 @@ function setup () {
 }
 
 function drawFloor () {
-  let floor_ = visible.clone(c => (c == ' ' || c == '0') ? 1 : 0);
+  let floor_ = visible.clone(c => (c == ' ') ? 1 : 0);
   let rules = [
     { pattern : [[1,1,1],[1,1,1],[1,1,1]],
       tile : 1 },
