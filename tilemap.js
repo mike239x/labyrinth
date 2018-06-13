@@ -80,10 +80,11 @@ class Array2D {
   }
 
   filter (f) {
+    console.log(f);
     if (f == undefined) {
       f = x => x; // can also be used for copying
     }
-    let re = new Map(this.width, this.height);
+    let re = new Array2D(this.width, this.height);
     for (let i = 0; i < this.width; i++) {
       for (let j = 0; j < this.height; j++) {
         re.data[i][j] = f(this.data[i][j]);
@@ -259,7 +260,7 @@ class Map extends Array2D {
 
   compile() {
     for (let layer of this.layers) {
-      layer.load(this.filter(layer.filter));
+      layer.load(this.filter(layer.f));
       layer.compile();
     }
   }
@@ -269,12 +270,12 @@ class Map extends Array2D {
     if (q == undefined) return undefined;
     if (q == 0) return 0;
     for (let layer of this.layers) {
-      layer.set(layer.filter(c),i,j);
+      layer.set(layer.f(c),i,j);
     }
   }
 
   //TODO: think if the scale is needed
-  draw (x, y, cx, cy, scale) {
+  draw (x, y, cx = -0.5, cy = -0.5, scale = 1) {
     for (let layer of this.layers) {
       layer.draw(x,y,cx,cy,scale*this.ts/layer.tiles.ts);
     }
