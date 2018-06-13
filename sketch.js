@@ -103,21 +103,30 @@ function move (dx, dy) {
 }
 
 function keyTyped () {
+  console.log(key);
   switch (key) {
     case 'w':
+    case 'W':
     case 'ц':
+    case 'Ц':
       move(0,-1);
       break;
     case 'a':
+    case 'A':
     case 'ф':
+    case 'Ф':
       move(-1,0);
       break;
     case 's':
+    case 'S':
     case 'ы':
+    case 'Ы':
       move(0,1);
       break;
     case 'd':
+    case 'D':
     case 'в':
+    case 'В':
       move(1,0);
       break;
     default:
