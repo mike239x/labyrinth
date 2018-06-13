@@ -61,11 +61,12 @@ function setup () {
 
 function draw () {
   background(255);
-  visible.draw(0,0);
+  visible.draw(320,224, player.x, player.y, 0.5);
   var s = roomSize;
   stroke(255,0,0);
   fill(255,0,0);
-  ellipse(player.x*s +s/2, player.y*s +s/2, 20);
+  ellipse(320, 228, 20);
+  // ellipse(player.x*s +s/2, player.y*s +s/2, 20);
 }
 
 function moveChar (dx, dy) {
