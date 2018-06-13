@@ -80,7 +80,6 @@ class Array2D {
   }
 
   filter (f) {
-    console.log(f);
     if (f == undefined) {
       f = x => x; // can also be used for copying
     }
